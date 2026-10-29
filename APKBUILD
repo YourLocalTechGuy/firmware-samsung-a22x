@@ -14,7 +14,7 @@ source="
 package() {
     # Create your target postmarketos search directory
     install -dm755 "$pkgdir/lib/firmware/postmarketos"
-
+#    install -Dm644 "$srcdir/99-blobs.files" "$pkgdir/usr/share/mkinitfs/files-extra/99-blobs.files"
     # Extract or copy your firmware files into it
     # If firmware.tar.gz extracts into a 'firmware/' folder, copy its contents:
     if [ -d "$srcdir/firmware" ]; then
